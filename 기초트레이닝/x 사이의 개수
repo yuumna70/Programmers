@@ -16,3 +16,21 @@ myString	result
 
 입출력 예 #2
 "x"를 기준으로 문자열을 나누면 ["", "abc", "def", "ghi"]가 됩니다. 각각의 길이로 배열을 만들면 [0, 3, 3, 3]입니다. 따라서 [0, 3, 3, 3]을 return 합니다.
+
+[Solution]
+using System;
+
+public class Solution 
+{
+    public int[] solution(string myString) 
+    {
+        string[] tmp = myString.Split("x");
+        int[] answer = new int[tmp.Length];
+
+        for(int i = 0 ; i < tmp.Length ; i++){
+            answer[i] = tmp[i].Length;
+        }
+
+        return answer;
+    }
+}
